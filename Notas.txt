@@ -1,0 +1,44 @@
+-Instalar Angular Cli
+npm install -g @angular/cli
+
+-Crear aplicación
+ng new <project-name>
+
+-Crear componente
+ng g c nombre_componente
+ng generate component nombre_componente
+
+-Crear componente in line
+ng g c nombre_componente -s -t
+
+-Crear componente
+ng g s nombre_servicio
+ng generate service nombre_servicio
+
+-Correr aplicación
+cd my-first-angular-app
+npm start
+ng serve
+
+-Apagar servidor
+Ctrl + C
+
+-Git
+git init
+git checkout feature/ui-fixes
+git pull origin feature/ui-fixes
+git checkout -b jerm-06102020-WiX
+git status
+git add .
+git commit -am "WiX"
+git pull origin feature/ui-fixes
+git push
+git remote add origin https://github.com/Dark-TN/CursoAngular.git
+git branch -M main
+git push -u origin main
+
+-Nomenclatura nombramiento componentes
+<nombreComponente>.component.ts
+
+-Instalar bootstrap
+npm install bootstrap --save

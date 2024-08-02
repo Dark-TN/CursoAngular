@@ -1,0 +1,24 @@
+<p>Nombre del empleado: {{nombre}}</p> 
+<p>Apellido del empleado: {{apellido}}</p> 
+<p>Edad del empleado: {{2024 - getAnoNacimiento() > 18? "Mayor de edad" : "Menor de edad"}}</p> 
+<p>Empresa del empleado: {{empresa}}</p>
+<!--Property binding-->
+<!--Introduce la empresa: <input type="text" placeholder="Empresa" #txtEmpresa (keyup)="setEmpresa(txtEmpresa.value)" [disabled]="enabledTxtEmpresa">-->
+<!--Two way binding banana in box [()]-->
+Introduce la empresa: <input type="text" placeholder="Empresa" #txtEmpresa [(ngModel)]="empresa">
+
+<br>
+<br>
+Introduce el nombre del usuario: <input type="text" placeholder="Usuario" #txtUsuario>
+<br>
+<input type="button" value="Buscar" (click)="setUsuarioRegistrado(txtUsuario.value)">
+<br>
+Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistrado">
+<br>
+{{msjUsuarioRegistrado}}
+<br>
+{{msjUsuariosRegistrados}}
+<br>
+<!--Event binding-->
+Registrar: <input type="radio" value="si" name="rdo-registrar" id="registro" (click)="onRegistrar($event)">
+No registrar: <input type="radio" value="no" name="rdo-registrar" (click)="onRegistrar($event)">

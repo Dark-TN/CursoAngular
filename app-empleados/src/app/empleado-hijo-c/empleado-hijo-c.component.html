@@ -1,0 +1,17 @@
+<div class="container my-2">
+    <div class="row">
+      <div class="col">
+        <div >
+          {{indice + 1}} {{empLista.nombre}} {{empLista.apellido}} {{empLista.cargo}} {{empLista.salario}}
+          <a [routerLink]="['/actualiza', indice]" [queryParams]="{accion: '1'}" class="mx-1">Actualizar</a>
+          <a [routerLink]="['/actualiza', indice]" [queryParams]="{accion: '2'}" class="mx-1">Eliminar</a>
+          <button class="btn btn-danger mx-1" (click)="eliminarUsuario()">Eliminar sin redirect</button>
+        </div>
+        <app-caracteristicas-empleado-c (caracteristicasEmpleados)="guardarCaracteristica($event)"></app-caracteristicas-empleado-c>
+        <ul style="list-style: none;">
+          <li *ngFor="let caracteristica of caracteristicas">{{caracteristica}}</li>
+        </ul>
+      </div>
+    </div>
+</div>
+

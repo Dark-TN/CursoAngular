@@ -1,0 +1,29 @@
+<p>proyectos-component works!</p>
+<div class="container my-4">
+    <div class="col">
+      <h1>{{titulo}}</h1>
+    </div>
+    <br><br>
+    <form class="form-group row">
+      <div class="form-group col-md-3 my-1">
+        <label for="txt-nombre">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="txt-nombre" [(ngModel)]="nombre">
+      </div>
+      <div class="form-group col-md-3 my-1">
+        <label for="txt-apellido">Apellido</label>
+        <input type="text" class="form-control" name="apellido" id="txt-apellido" [(ngModel)]="apellido">
+      </div>
+      <div class="form-group col-md-3 my-1">
+        <label for="txt-cargo">Cargo</label>
+        <input type="text" class="form-control" name="cargo" id="txt-cargo" [(ngModel)]="cargo">
+      </div>
+      <div class="form-group col-md-3 my-1">
+        <label for="txt-salario">Salario</label>
+        <input type="number" class="form-control" name="salario" id="txt-salario" [(ngModel)]="salario">
+      </div>
+      <div class="col my-1">
+        <button type="submit" class="btn btn-primary my-3" (click)="registrar()">Guardar</button>
+      </div>  
+    </form>
+</div>
+<br><br><br>
